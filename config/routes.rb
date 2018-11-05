@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'doses/index'
+  get 'doses/show'
+  get 'doses/new'
+  get 'doses/edit'
+  get 'does/index'
+  get 'does/show'
+  get 'does/new'
+  get 'does/edit'
   get 'cocktails/index'
   get 'cocktails/show'
   get 'cocktails/new'
