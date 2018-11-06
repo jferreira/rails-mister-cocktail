@@ -24,7 +24,13 @@ gem 'simple_form'
 gem 'faker'
 gem 'json'
 gem 'awesome_print'
+
+# HIDDEN
 gem 'dotenv-rails', groups: [:development, :test]
+
+# IMAGES
+gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

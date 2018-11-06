@@ -5,5 +5,13 @@
 
   <%= link_to 'Back', doses_path, class: "btn btn-default" %>
 
+  <!-- app/views/articles/_form.html.erb -->
+  <%= simple_form_for(@cocktail) do |f| %>
+    <!-- [...] -->
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+    <!-- [...] -->
+  <% end %>
+
   </div>
 </div>

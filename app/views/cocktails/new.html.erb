@@ -15,21 +15,8 @@
 
         <%= simple_form_for @cocktail do |f| %>
           <%= f.input :name %>
-          <%= f.button :submit %>
+          <%= f.button :submit, class: "btn btn-default" %>
         <% end %>
-
-
-<!--         <%= simple_form_for coupon, remote: true do |f| %>
-          <%= f.input :title, wrapper: :field4 %>
-          <%= f.input :description, wrapper: :field8 %>
-          <%= f.input :image, wrapper: :field8 %>
-          <%= f.input :expiry_date, wrapper: :ig4, wrapper_html: {id: "expiry-date-input"} do %>
-            <%= f.input_field :expiry_date, as: :string, class: "form-control" %>
-            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-          <% end %>
-          <%= f.button :submit %>
-        <% end %> -->
-
 
       </li>
       <li>
