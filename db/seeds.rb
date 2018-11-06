@@ -6,14 +6,61 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'json'
+require 'open-uri'
 require "faker"
+require 'awesome_print'
 
-50.times do
+puts "---------------------------------"
+puts
+puts "im starting to seed the database"
+
+# url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
+# ingredients_serialized = open(url).read
+# ingredients = JSON.parse(ingredients_serialized)
+
+# ap ingredients['strIngredient1']
+
+# ingredients
+
+# ingredients.each do |ingredient|
+#  puts ingredient[strIngredient1]
+# end
+
+
+ingredients_array = []
+
+3.times do
+
   ingredient = Ingredient.create(
     name: Faker::Commerce.product_name
     )
-  ingredient.save
+
+    puts ingredient.id
+    puts ingredient.name
+    ingredient.save!
+
 end
+
+
+3.times do
+
+  cocktail = Cocktail.create(
+    name: Faker::Cannabis.strain
+    )
+
+    puts cocktail.id
+    puts cocktail.name
+    cocktail.save!
+
+end
+
+
+
+
+puts "---------------------------------"
+puts
+puts "END OF SEEDING"
 
 # 100.times do
 #   post = Post.new(

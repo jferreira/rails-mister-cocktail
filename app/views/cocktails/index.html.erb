@@ -1,2 +1,37 @@
-<h1>Cocktails#index</h1>
-<p>Find me in app/views/cocktails/index.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://2.bp.blogspot.com/-hBSUZrju4Bw/W8hwc4hISzI/AAAAAAAAVQg/kM6EJ-xf6r4hyQGmFbUC2TtzjV0P0qXvACEwYBhgL/s640/73566413-B30C-4D9E-8789-3605283D684F.JPG');">
+  <div class="banner-content">
+    <h1>Blackcat</h1>
+    <p>minimart</p>
+    <%= link_to 'Add New Cocktail', new_cocktail_path, class: "btn btn-default" %>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row text-center">
+
+  <ul>
+    <% @cocktails.each do |cocktail| %>
+
+      <div class="col-xs-3 col-sm-4">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/cocktails0615-xl-blood-and-sand.jpg');">
+          <!-- <div class="card-category">Popular</div> -->
+          <div class="card-description">
+            <h2><%= cocktail.name %></h2>
+            <p>tastes great</p>
+          </div>
+          <img class="card-user" src="https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/cocktails0615-xl-blood-and-sand.jpg">
+          <!-- <a class="card-link" href="#" ></a> -->
+
+
+        </div>
+      <%= link_to 'see cocktail', cocktail_path(cocktail), class: "btn btn-default" %>
+      </div>
+
+
+
+    <% end %>
+  </ul>
+
+
+  </div>
+</div>

@@ -1,2 +1,21 @@
-<h1>Doses#new</h1>
-<p>Find me in app/views/doses/new.html.erb</p>
+<div class="container">
+  <div class="row">
+
+  <h1>Does: New Page</h1>
+<!-- create a form to add a dose to a cocktail -->
+<!-- < link_to 'Back', doses_path, class: "btn btn-default" %> -->
+
+
+<!-- 0 - after createing the new fuction in the controller -->
+<!-- 1 - need a form, to capture the [ DESCRIPTION ] & [ INGREDEIENT ] take the parent id [ Cocktail ] and the empty [ DOSE ] instance -->
+<!-- 2 - sumbit  -->
+
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description %>
+    <%= f.association :ingredient, collection: Ingredient.all %>
+    <%= f.button :submit %>
+  <% end %>
+
+
+  </div>
+</div>

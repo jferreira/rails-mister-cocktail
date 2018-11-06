@@ -1,2 +1,41 @@
-<h1>Cocktails#new</h1>
-<p>Find me in app/views/cocktails/new.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://download.hipwallpaper.com/desktop/1920/1080/84/87/yxPqfA.jpg');">
+  <div class="banner-content">
+    <h1>Create Cocktail</h1>
+    <p>Select below</p>
+    <%= link_to 'Back', cocktails_path, class: "btn btn-default" %>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+
+    <ul>
+      <li>
+      <p>Name of the cocktail</p>
+
+        <%= simple_form_for @cocktail do |f| %>
+          <%= f.input :name %>
+          <%= f.button :submit %>
+        <% end %>
+
+
+<!--         <%= simple_form_for coupon, remote: true do |f| %>
+          <%= f.input :title, wrapper: :field4 %>
+          <%= f.input :description, wrapper: :field8 %>
+          <%= f.input :image, wrapper: :field8 %>
+          <%= f.input :expiry_date, wrapper: :ig4, wrapper_html: {id: "expiry-date-input"} do %>
+            <%= f.input_field :expiry_date, as: :string, class: "form-control" %>
+            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+          <% end %>
+          <%= f.button :submit %>
+        <% end %> -->
+
+
+      </li>
+      <li>
+        <%= link_to 'Back', cocktails_path, class: "btn btn-default" %>
+      </li>
+    </ul>
+
+  </div>
+</div>

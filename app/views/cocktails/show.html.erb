@@ -1,2 +1,22 @@
-<h1>Cocktails#show</h1>
-<p>Find me in app/views/cocktails/show.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://download.hipwallpaper.com/desktop/1920/1080/84/87/yxPqfA.jpg');">
+  <div class="banner-content">
+    <h1><%= @cocktail.name%></h1>
+    <p>read more below</p>
+    <%= link_to 'Add New Cocktail', new_cocktail_path, class: "btn btn-info" %>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+
+    <h3><%= @cocktail.name%></h3>
+    <p>Hi I'm a cocktail description</p>
+
+<!-- cocktails/1/doses/new -->
+    <%= link_to 'Add Dose', new_cocktail_dose_path(@cocktail), class: "btn btn-default" %>
+
+
+    <%= link_to 'Back', cocktails_path, class: "btn btn-default" %>
+
+  </div>
+</div>
